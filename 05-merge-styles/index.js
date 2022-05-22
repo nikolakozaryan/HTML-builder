@@ -1,7 +1,6 @@
 const path = require("path");
 const fsPromises = require("fs/promises");
 const fs = require("fs");
-const readline = require("readline");
 
 const [src, dst] = [
   path.join(__dirname, "styles"),
