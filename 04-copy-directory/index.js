@@ -24,7 +24,7 @@ async function copyDir(src, dst) {
 
   for (let file of srcFiles) {
     const paths = [path.join(src, file.name), path.join(dst, file.name)];
-    file.isDirectory() ? copyDir(...paths) : await copyFile(...paths);
+    file.isDirectory() ? await copyDir(...paths) : await copyFile(...paths);
   }
 }
 
